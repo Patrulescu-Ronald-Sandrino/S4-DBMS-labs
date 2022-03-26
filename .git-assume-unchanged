@@ -1,0 +1,2 @@
+# git update-index --assume-unchanged <every file from here>
+connectionString.txt
