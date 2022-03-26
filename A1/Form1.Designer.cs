@@ -63,7 +63,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoGenerateColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.coffeeShopDBDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(42, 48);
@@ -83,7 +83,7 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoGenerateColumns = true;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.DataSource = this.coffeeShopDBDataSetBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(42, 247);

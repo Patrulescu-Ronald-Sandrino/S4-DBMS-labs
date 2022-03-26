@@ -16,6 +16,7 @@ namespace A1
         SqlConnection sqlConnection;
         SqlDataAdapter dataAdapterPosition, dataAdapterSalary;
         DataSet dataSet;
+        SqlCommandBuilder sqlCommandBuilderSalary;
         BindingSource bindingSourcePosition, bindingSourceSalary;
 
         public Form1()
@@ -57,7 +58,8 @@ namespace A1
                 // TODO: implementation
                 dataAdapterPosition = new SqlDataAdapter("select * from Position", sqlConnection);
                 dataAdapterSalary = new SqlDataAdapter("select * from Salary", sqlConnection);
-
+                sqlCommandBuilderSalary = new SqlCommandBuilder(dataAdapterSalary);
+                
                 dataSet = new DataSet();
                 dataAdapterPosition.Fill(dataSet, "Position");
                 dataAdapterSalary.Fill(dataSet, "Salary");
@@ -83,7 +85,14 @@ namespace A1
         {
             if (dataSet != null)
             {
-                Console.WriteLine("[log][Form1.button2_Click()] Updated " + dataAdapterSalary.Update(dataSet, "Salary") + " rows");
+                try
+                {
+                    Console.WriteLine("[log][Form1.button2_Click()] Updated " + dataAdapterSalary.Update(dataSet, "Salary") + " rows");
+                }
+                catch (Exception exception)
+                {
+                    Program.LogError("[error][Form1.button2_Click()] Exception caught: " + exception.Message);
+                }
             }
             else
             {
