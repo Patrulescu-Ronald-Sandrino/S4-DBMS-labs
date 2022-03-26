@@ -32,12 +32,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.coffeeShopDBDataSet = new A1.CoffeeShopDBDataSet();
             this.coffeeShopDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coffeeShopDBDataSet = new A1.CoffeeShopDBDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Update DB";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -70,15 +71,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(431, 172);
             this.dataGridView1.TabIndex = 2;
             // 
-            // coffeeShopDBDataSet
-            // 
-            this.coffeeShopDBDataSet.DataSetName = "CoffeeShopDBDataSet";
-            this.coffeeShopDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // coffeeShopDBDataSetBindingSource
             // 
             this.coffeeShopDBDataSetBindingSource.DataSource = this.coffeeShopDBDataSet;
             this.coffeeShopDBDataSetBindingSource.Position = 0;
+            // 
+            // coffeeShopDBDataSet
+            // 
+            this.coffeeShopDBDataSet.DataSetName = "CoffeeShopDBDataSet";
+            this.coffeeShopDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView2
             // 
@@ -102,8 +103,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
