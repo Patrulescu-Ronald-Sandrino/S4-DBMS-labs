@@ -82,6 +82,7 @@
     <None Include="CoffeeShopDBDataSet.xss">
       <DependentUpon>CoffeeShopDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="data\CoffeeShop.uml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\CoffeeShop.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
