@@ -90,7 +90,6 @@ namespace A1
             {
                 Program.LogError("[error][Form1.button2_Click()] dataSet is null");
             }
-            
         }
     }
 }
