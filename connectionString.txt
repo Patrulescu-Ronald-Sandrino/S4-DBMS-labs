@@ -1,1 +1,0 @@
-﻿Data Source=localhost;Initial Catalog=master;User ID=sa;Password=<insert password here>
