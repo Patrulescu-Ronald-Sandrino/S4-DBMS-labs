@@ -21,24 +21,43 @@ namespace A1
             Application.Run(new Form1());
         }
 
-        public static SqlConnection CreateSqlConnection(String connectionStringFilePath)
+
+        public static String ReadConnectionStringFromFile(String connectionStringFilePath)
         {
-            SqlConnection sqlConnection = null;
+            String connectionString = "";
             try
             {
                 using (var streamReader = new StreamReader(connectionStringFilePath)) // https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0
                 {
-                    var connectionString = "";
-                    sqlConnection = (connectionString = streamReader.ReadLine()) == null ?
-                                        null : new SqlConnection(connectionString);
+                    connectionString = streamReader.ReadLine();
                 }
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
-                LogError("[error][MainClass::CreateSqlConnection] Reading the file failed: " + e.Message);
-                sqlConnection = null;
+                LogError("[error][MainClass::ReadConnectionStringFromFile] Reading the file failed: " + exception.Message);
+
             }
-            return sqlConnection;
+            return connectionString;
+        }
+
+        public static String getConnectionString()
+        {
+            Console.WriteLine("[log][Program.getConnectionString()] OSVersion: " + Environment.OSVersion.ToString());
+            var connectionString = "";
+            if (Environment.OSVersion.ToString().Contains("Microsoft Windows")) // https://www.geeksforgeeks.org/c-sharp-program-to-get-the-operating-system-version-of-computer-using-environment-class/
+            {
+                connectionString = @"Data Source=WIN10-ACERASPV5\SQLEXPRESS;Initial Catalog=CoffeeShopDB;Integrated Security=True"; // Server Explorer -> Right click on a Data Connection -> Properties -> Connection String
+                connectionString = @"Data Source=" + System.Environment.MachineName + @"\SQLEXPRESS;Initial Catalog=CoffeeShopDB;Integrated Security=True"; // first answer from https://stackoverflow.com/questions/1768198/how-do-i-get-the-computer-name-in-net
+            }
+            else
+            {
+                Console.WriteLine("[log][Program.getConnectionString()] Run location: " + System.IO.Directory.GetCurrentDirectory()); // c# print pwd-> https://www.codegrepper.com/code-examples/csharp/c%23+pwd
+                var connectionStringFilePath = "../../../connectionString.txt";
+                //var connectionStringFilePath = "../connectionString.txt";
+                connectionString = Program.ReadConnectionStringFromFile(connectionStringFilePath);
+
+            }
+            return connectionString;
         }
 
         public static void LogError(String errorMessage)
