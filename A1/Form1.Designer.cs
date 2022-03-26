@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.coffeeShopDBDataSet = new A1.CoffeeShopDBDataSet();
+            this.coffeeShopDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -55,11 +60,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.coffeeShopDBDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(42, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(354, 142);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // coffeeShopDBDataSet
+            // 
+            this.coffeeShopDBDataSet.DataSetName = "CoffeeShopDBDataSet";
+            this.coffeeShopDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coffeeShopDBDataSetBindingSource
+            // 
+            this.coffeeShopDBDataSetBindingSource.DataSource = this.coffeeShopDBDataSet;
+            this.coffeeShopDBDataSetBindingSource.Position = 0;
             // 
             // Form1
             // 
@@ -72,6 +89,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,6 +100,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource coffeeShopDBDataSetBindingSource;
+        private CoffeeShopDBDataSet coffeeShopDBDataSet;
     }
 }
 
