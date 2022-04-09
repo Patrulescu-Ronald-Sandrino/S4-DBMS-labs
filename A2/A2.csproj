@@ -34,6 +34,7 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System" />
+        <Reference Include="System.Configuration" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Data.DataSetExtensions" />
@@ -58,7 +59,13 @@
       <Content Include="CoffeeShopDBDataSet.xsc" />
       <Content Include="CoffeeShopDBDataSet.xsd" />
       <Content Include="CoffeeShopDBDataSet.xss" />
+      <Content Include="data\CoffeeShop.sql" />
+      <Content Include="data\CoffeeShop.uml" />
       <Content Include="Properties\Settings.settings" />
+      <Content Include="README.md" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="App.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

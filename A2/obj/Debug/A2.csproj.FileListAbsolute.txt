@@ -7,3 +7,4 @@
 /mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/A2.Form1.resources
 /mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/A2.csproj.GenerateResource.cache
 /mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/A2.Properties.Resources.resources
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/bin/Debug/A2.exe.config

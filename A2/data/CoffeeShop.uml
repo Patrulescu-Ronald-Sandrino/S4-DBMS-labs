@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Diagram>
   <ID>DATABASE</ID>
-  <OriginalElement>63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_flavor</OriginalElement>
+  <OriginalElement>3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_flavor</OriginalElement>
   <nodes>
-    <node x="272.5" y="0.0">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Employee</node>
-    <node x="473.5" y="12.5">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Schedule</node>
-    <node x="147.63461538461542" y="658.0">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_product</node>
-    <node x="473.4198717948718" y="186.0">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Salary</node>
-    <node x="629.5" y="12.5">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Position</node>
-    <node x="0.0" y="397.0">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Product</node>
-    <node x="475.0" y="434.5">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Flavor</node>
-    <node x="290.5" y="198.5">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.DiningTable</node>
-    <node x="271.0" y="434.5">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Ordering</node>
-    <node x="375.38461538461536" y="671.0">63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_flavor</node>
+    <node x="0.0" y="397.0">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Product</node>
+    <node x="147.20192307692304" y="658.0">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_product</node>
+    <node x="473.5" y="12.5">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Position</node>
+    <node x="495.48717948717945" y="186.0">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Salary</node>
+    <node x="271.0" y="434.5">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Ordering</node>
+    <node x="290.5" y="198.5">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.DiningTable</node>
+    <node x="272.5" y="0.0">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Employee</node>
+    <node x="374.9519230769231" y="671.0">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_flavor</node>
+    <node x="674.5" y="12.5">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Schedule</node>
+    <node x="475.0" y="434.5">3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Flavor</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Ordering" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.DiningTable" relationship="REFERENCES">
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.DiningTable" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Employee" relationship="REFERENCES">
       <point x="0.0" y="-68.0" />
       <point x="0.0" y="68.0" />
     </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Salary" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Position" relationship="REFERENCES">
-      <point x="46.66666666666666" y="-80.5" />
-      <point x="590.0865384615385" y="161.0" />
-      <point x="720.0" y="161.0" />
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Salary" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Position" relationship="REFERENCES">
+      <point x="0.0" y="-80.5" />
+      <point x="565.4871794871794" y="161.0" />
+      <point x="564.0" y="161.0" />
       <point x="0.0" y="55.5" />
     </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_product" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Ordering" relationship="REFERENCES">
-      <point x="48.0" y="-68.0" />
-      <point x="291.6346153846154" y="633.0" />
-      <point x="363.0" y="633.0" />
-      <point x="0.0" y="68.0" />
-    </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Salary" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Employee" relationship="REFERENCES">
-      <point x="-46.66666666666666" y="-80.5" />
-      <point x="496.75320512820514" y="161.0" />
-      <point x="363.0" y="161.0" />
-      <point x="0.0" y="68.0" />
-    </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_flavor" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Ordering" relationship="REFERENCES">
-      <point x="-43.75" y="-55.0" />
-      <point x="419.13461538461536" y="633.0" />
-      <point x="363.0" y="633.0" />
-      <point x="0.0" y="68.0" />
-    </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.DiningTable" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Employee" relationship="REFERENCES">
-      <point x="0.0" y="-68.0" />
-      <point x="0.0" y="68.0" />
-    </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_product" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Product" relationship="REFERENCES">
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_product" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Product" relationship="REFERENCES">
       <point x="-48.0" y="-68.0" />
-      <point x="195.63461538461542" y="633.0" />
+      <point x="195.20192307692304" y="633.0" />
       <point x="125.5" y="633.0" />
       <point x="0.0" y="105.5" />
     </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Salary" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Schedule" relationship="REFERENCES">
-      <point x="0.0" y="-80.5" />
-      <point x="543.4198717948718" y="161.0" />
-      <point x="541.5" y="161.0" />
-      <point x="0.0" y="55.5" />
-    </edge>
-    <edge source="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_flavor" target="63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Flavor" relationship="REFERENCES">
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_flavor" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Flavor" relationship="REFERENCES">
       <point x="43.75" y="-55.0" />
-      <point x="506.63461538461536" y="633.0" />
+      <point x="506.2019230769231" y="633.0" />
       <point x="564.0" y="633.0" />
       <point x="0.0" y="68.0" />
     </edge>
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Salary" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Employee" relationship="REFERENCES">
+      <point x="-46.66666666666666" y="-80.5" />
+      <point x="518.8205128205128" y="161.0" />
+      <point x="363.0" y="161.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Ordering" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.DiningTable" relationship="REFERENCES">
+      <point x="0.0" y="-68.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_product" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Ordering" relationship="REFERENCES">
+      <point x="48.0" y="-68.0" />
+      <point x="291.20192307692304" y="633.0" />
+      <point x="363.0" y="633.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Contains_flavor" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Ordering" relationship="REFERENCES">
+      <point x="-43.75" y="-55.0" />
+      <point x="418.7019230769231" y="633.0" />
+      <point x="363.0" y="633.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Salary" target="3a1be6ed-f784-433a-806f-78976e2e76f4.TABLE:CoffeeShopDB.dbo.Schedule" relationship="REFERENCES">
+      <point x="46.66666666666666" y="-80.5" />
+      <point x="612.1538461538462" y="161.0" />
+      <point x="742.5" y="161.0" />
+      <point x="0.0" y="55.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.4262899262899263" showDependencies="false" x="405.5" y="397.0" />
-  <SelectedNodes>
-    <node>63577122-ad65-4485-9471-2cd967c04ddf.TABLE:CoffeeShopDB.dbo.Contains_flavor</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic" zoom="0.578399518652226" showDependencies="false" x="521.5553993624502" y="484.75699573494245" />
+  <SelectedNodes />
   <Categories>
     <Category>Columns</Category>
     <Category>Comments</Category>

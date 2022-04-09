@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,16 +8,23 @@ namespace A2
 {
     public partial class Form1 : Form
     {
-        SqlConnection sqlConnection;
-        SqlDataAdapter dataAdapterPosition, dataAdapterSalary;
-        DataSet dataSet;
-        SqlCommandBuilder sqlCommandBuilderSalary;
-        BindingSource bindingSourcePosition, bindingSourceSalary;
+        private SqlConnection _sqlConnection;
+        private SqlDataAdapter _dataAdapterParent, _dataAdapterChild;
+        private DataSet _dataSet;
+        private SqlCommandBuilder _sqlCommandBuilderChild;
+        private BindingSource _bindingSourceParent, _bindingSourceChild;
 
         public Form1()
         {
             InitializeComponent();
         }
+
+        private string GetParentTable() => ConfigurationManager.AppSettings["parentTable"];
+        private string GetParentTablePK() => ConfigurationManager.AppSettings["parentTablePK"];
+        private string GetChildTable() => ConfigurationManager.AppSettings["childTable"];
+        private string GetChildTablePK() => ConfigurationManager.AppSettings["childTableFK"];
+        private string GetParentQuery() => ConfigurationManager.AppSettings["parentQuery"];
+        private string GetChildQuery() => ConfigurationManager.AppSettings["childQuery"];
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -27,7 +35,7 @@ namespace A2
                 return;
             }
             Console.WriteLine("[log][Form1.button1_Click()] connectionString: " + connectionString);
-            if ((sqlConnection = new SqlConnection(connectionString)) == null)
+            if ((_sqlConnection = new SqlConnection(connectionString)) == null)
             {
                 Program.LogError("[error][Form1.button1_Click()] creating a SQL Connection failed");
                 return;
@@ -37,33 +45,35 @@ namespace A2
             try
             {
                 // open the connection
-                sqlConnection.Open();
+                _sqlConnection.Open();
                 Console.WriteLine("[log][Form1.button1_Click()] Opened the SQL Connection");
-                Console.WriteLine("[log][Form1.button1_Click()] The state of the connection: " + sqlConnection.State);
+                Console.WriteLine("[log][Form1.button1_Click()] The state of the connection: " + _sqlConnection.State);
 
                 // switch to the CoffeeShopDB
-                using (SqlCommand sqlCommand = new SqlCommand("USE [CoffeeShopDB]", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("USE [CoffeeShopDB]", _sqlConnection))
                 {
                     sqlCommand.ExecuteNonQuery();
                     Console.WriteLine("[log][Form1.button1_Click()] Switched to [CoffeeShopDB]");
                 }
 
 
-                dataAdapterPosition = new SqlDataAdapter("select * from Position", sqlConnection);
-                dataAdapterSalary = new SqlDataAdapter("select * from Salary", sqlConnection);
-                sqlCommandBuilderSalary = new SqlCommandBuilder(dataAdapterSalary);
+                _dataAdapterParent = new SqlDataAdapter(GetParentQuery(), _sqlConnection);
+                _dataAdapterChild = new SqlDataAdapter(GetChildQuery(), _sqlConnection);
+                _sqlCommandBuilderChild = new SqlCommandBuilder(_dataAdapterChild);
                 
-                dataSet = new DataSet();
-                dataAdapterPosition.Fill(dataSet, "Position");
-                dataAdapterSalary.Fill(dataSet, "Salary");
+                _dataSet = new DataSet();
+                _dataAdapterParent.Fill(_dataSet, GetParentTable());
+                _dataAdapterChild.Fill(_dataSet, GetChildTable());
 
-                dataSet.Relations.Add(new DataRelation("FK_pid_Position_to_Salary", dataSet.Tables["Position"].Columns["pid"], dataSet.Tables["Salary"].Columns["pidfk"]));
+                _dataSet.Relations.Add(new DataRelation("FK_pid_Position_to_Salary", 
+                    _dataSet.Tables[GetParentTable()].Columns[GetParentTablePK()], 
+                    _dataSet.Tables[GetChildTable()].Columns[GetChildTablePK()]));
 
-                bindingSourcePosition = new BindingSource { DataSource = dataSet, DataMember = "Position" };
-                bindingSourceSalary = new BindingSource { DataSource = bindingSourcePosition, DataMember = "FK_pid_Position_to_Salary" };
+                _bindingSourceParent = new BindingSource { DataSource = _dataSet, DataMember = GetParentTable() };
+                _bindingSourceChild = new BindingSource { DataSource = _bindingSourceParent, DataMember = "FK_pid_Position_to_Salary" };
 
-                dataGridView1.DataSource = bindingSourcePosition;
-                dataGridView2.DataSource = bindingSourceSalary;
+                dataGridView1.DataSource = _bindingSourceParent;
+                dataGridView2.DataSource = _bindingSourceChild;
 
 
                 // END: free resources
@@ -76,11 +86,11 @@ namespace A2
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataSet != null)
+            if (_dataSet != null)
             {
                 try
                 {
-                    Console.WriteLine("[log][Form1.button2_Click()] Updated " + dataAdapterSalary.Update(dataSet, "Salary") + " rows");
+                    Console.WriteLine("[log][Form1.button2_Click()] Updated " + _dataAdapterChild.Update(_dataSet, GetChildTable()) + " rows");
                 }
                 catch (Exception exception)
                 {
