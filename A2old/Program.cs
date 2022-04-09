@@ -27,7 +27,7 @@ namespace A2
             }
             catch (Exception e)
             {
-                Console.WriteLine("Main() caught: " + e.Message);
+                Console.WriteLine("Program.Main() caught: " + e.Message);
             }
         }
 
