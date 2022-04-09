@@ -155,6 +155,19 @@ INSERT INTO Employee VALUES
 ('Employee 9', '2021-11-06', NULL)
 GO
 
+
+INSERT INTO Employee VALUES
+('Employee 11', '2015-12-20', 0.2),
+('Employee 12', '2015-12-23', 0.2),
+('Employee 13', '2017-01-10', 0.17),
+('Employee 14', '2017-03-15', 0.15),
+('Employee 15', '2017-03-21', 0.13),
+('Employee 16', '2020-09-01', 0.11),
+('Employee 17', '2021-01-01', 0.07),
+('Employee 18', '2021-06-01', 0.04),
+('Employee 19', '2021-11-06', NULL)
+GO
+
 -- Value, Position, Schedule, Employee
 INSERT INTO Salary VALUES
 (2956.8, 1, 4, 1), -- Manager
