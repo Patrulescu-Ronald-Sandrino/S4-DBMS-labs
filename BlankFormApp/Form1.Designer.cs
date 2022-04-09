@@ -1,4 +1,4 @@
-﻿namespace A2
+﻿namespace BlankFormApp
 {
     partial class Form1
     {

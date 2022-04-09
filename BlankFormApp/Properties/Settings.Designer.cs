@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace A2.Properties
+namespace BlankFormApp.Properties
 {
 
 

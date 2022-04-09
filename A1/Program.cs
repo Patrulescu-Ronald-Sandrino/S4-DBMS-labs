@@ -19,9 +19,16 @@ namespace A1
             // for running from the CLI:
             // cd A1/bin/Debug; mcs -out:ProgramLinux.exe -r:System.Data -r:System.Windows.Forms.dll -r:System.Drawing -r:System.Data.DataSetExtensions $(find ../../ -iname "*.cs") && mono ProgramLinux.exe
             // source: ssmith147's answer about the Resources.Designer.cs file - https://social.msdn.microsoft.com/Forums/en-US/ebeca7a8-c7a3-4cb6-a40e-89c5fdb70c82/the-type-or-namespace-name-properties-does-not-exist-in-the-namespace-ltmynamespacegt
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Main() caught: " + e.Message);
+            }
         }
 
 

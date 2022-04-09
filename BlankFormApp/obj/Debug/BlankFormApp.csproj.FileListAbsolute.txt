@@ -1,0 +1,17 @@
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/bin/Debug/A2.exe.config
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/bin/Debug/A2.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/bin/Debug/A2.pdb
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/BlankFormApp.csproj.GenerateResource.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/BlankFormApp.csproj.CoreCompileInputs.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/A2.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/A2.pdb
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/A2/obj/Debug/BlankFormApp.Properties.Resources.resources
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.Properties.Resources.resources
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.csproj.GenerateResource.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.csproj.CoreCompileInputs.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/bin/Debug/BlankFormApp.exe.config
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/bin/Debug/BlankFormApp.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/bin/Debug/BlankFormApp.pdb
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.pdb
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/BlankFormApp/obj/Debug/BlankFormApp.csprojAssemblyReference.cache
