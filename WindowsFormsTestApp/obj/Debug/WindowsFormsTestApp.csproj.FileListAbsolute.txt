@@ -1,0 +1,11 @@
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\bin\Debug\WindowsFormsTestApp.exe.config
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\bin\Debug\WindowsFormsTestApp.exe
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\bin\Debug\WindowsFormsTestApp.pdb
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.csproj.AssemblyReference.cache
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.csproj.SuggestedBindingRedirects.cache
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.Form1.resources
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.Properties.Resources.resources
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.csproj.GenerateResource.cache
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.csproj.CoreCompileInputs.cache
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.exe
+E:\UBB_IE_2020-2023\S4.DBMS\labs\S4-DBMS-labs\WindowsFormsTestApp\obj\Debug\WindowsFormsTestApp.pdb
