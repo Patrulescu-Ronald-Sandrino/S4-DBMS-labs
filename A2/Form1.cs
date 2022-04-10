@@ -35,19 +35,14 @@ namespace A2
                 return;
             }
             Console.WriteLine("[log][Form1.button1_Click()] connectionString: " + connectionString);
-            if ((_sqlConnection = new SqlConnection(connectionString)) == null)
-            {
-                Program.LogError("[error][Form1.button1_Click()] creating a SQL Connection failed");
-                return;
-            }
+            _sqlConnection = new SqlConnection(connectionString);
             Console.WriteLine("[log][Form1.button1_Click()] created SQL Connection");
             
             try
             {
                 // open the connection
                 _sqlConnection.Open();
-                Console.WriteLine("[log][Form1.button1_Click()] Opened the SQL Connection");
-                Console.WriteLine("[log][Form1.button1_Click()] The state of the connection: " + _sqlConnection.State);
+                Console.WriteLine("[log][Form1.button1_Click()] Opened the SQL Connection. It's state is: " + _sqlConnection.State);
 
                 // switch to the CoffeeShopDB
                 using (SqlCommand sqlCommand = new SqlCommand("USE [CoffeeShopDB]", _sqlConnection))
