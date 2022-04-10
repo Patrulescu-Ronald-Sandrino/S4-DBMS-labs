@@ -1,0 +1,6 @@
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/bin/Debug/MasterDetailFormUsingDataGridViews.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/bin/Debug/MasterDetailFormUsingDataGridViews.pdb
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/obj/Debug/MasterDetailFormUsingDataGridViews.csprojAssemblyReference.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/obj/Debug/MasterDetailFormUsingDataGridViews.csproj.CoreCompileInputs.cache
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/obj/Debug/MasterDetailFormUsingDataGridViews.exe
+/mnt/e/UBB_IE_2020-2023/S4.DBMS/labs/S4-DBMS-labs/MasterDetailFormUsingDataGridViews/obj/Debug/MasterDetailFormUsingDataGridViews.pdb

@@ -74,6 +74,24 @@ namespace WindowsFormsTestApp
 
                 dataGridView1.DataSource = _bindingSourceParent;
                 dataGridView2.DataSource = _bindingSourceChild;
+                
+                // // shows only the parent table, crashes when I try to insert into it
+                // dataGridView1.DataSource = _dataSet;
+                // dataGridView1.DataMember = GetParentTable();
+                // dataGridView2.DataSource = _dataSet;
+                // // dataGridView2.DataMember = "FK_constraint"; // System.ArgumentException: Cannot create a child list for field FK_constraint.
+
+                
+                // // shows only the parent table, crashes when I try to insert into it
+                // dataGridView1.DataSource = _dataSet;
+                // dataGridView1.DataMember = GetParentTable();
+                // dataGridView2.DataSource = dataGridView1.DataSource;
+                // dataGridView2.DataMember = "FK_constraint";
+                
+                //  crashes when I try to insert into the parent: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+                // dataGridView1.DataSource = _dataSet;
+                // dataGridView1.DataMember = GetParentTable();
+                // dataGridView2.DataSource = _bindingSourceChild;
 
 
                 // END: free resources

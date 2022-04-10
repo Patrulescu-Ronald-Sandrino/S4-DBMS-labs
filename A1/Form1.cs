@@ -11,7 +11,7 @@ namespace A1
         SqlDataAdapter dataAdapterPosition, dataAdapterSalary;
         DataSet dataSet;
         SqlCommandBuilder sqlCommandBuilderSalary;
-        BindingSource bindingSourcePosition, bindingSourceSalary;
+        // BindingSource bindingSourcePosition, bindingSourceSalary;
 
         public Form1()
         {
@@ -57,13 +57,18 @@ namespace A1
                 dataAdapterPosition.Fill(dataSet, "Position");
                 dataAdapterSalary.Fill(dataSet, "Salary");
 
-                dataSet.Relations.Add(new DataRelation("FK_pid_Position_to_Salary", dataSet.Tables["Position"].Columns["pid"], dataSet.Tables["Salary"].Columns["pidfk"]));
+                // dataSet.Relations.Add(new DataRelation("FK_pid_Position_to_Salary", dataSet.Tables["Position"].Columns["pid"], dataSet.Tables["Salary"].Columns["pidfk"]));
 
-                bindingSourcePosition = new BindingSource { DataSource = dataSet, DataMember = "Position" };
-                bindingSourceSalary = new BindingSource { DataSource = bindingSourcePosition, DataMember = "FK_pid_Position_to_Salary" };
+                // bindingSourcePosition = new BindingSource { DataSource = dataSet, DataMember = "Position" };
+                // bindingSourceSalary = new BindingSource { DataSource = bindingSourcePosition, DataMember = "FK_pid_Position_to_Salary" };
 
-                dataGridView1.DataSource = bindingSourcePosition;
-                dataGridView2.DataSource = bindingSourceSalary;
+                // dataGridView1.DataSource = bindingSourcePosition;
+                // dataGridView2.DataSource = bindingSourceSalary;
+                
+                dataGridView1.DataSource = dataSet;
+                dataGridView1.DataMember = "Position";
+                dataGridView2.DataSource = dataSet;
+                dataGridView2.DataMember = "Salary";
 
 
                 // END: free resources
