@@ -1,0 +1,35 @@
+USE MASTER
+GO
+
+DROP DATABASE IF EXISTS [dbms-a3]; CREATE DATABASE [dbms-a3]
+GO
+
+USE [dbms-a3]
+GO
+
+DROP TABLE IF EXISTS T1
+DROP TABLE IF EXISTS T2
+DROP TABLE IF EXISTS T1mn2
+GO
+
+CREATE TABLE T1 (
+    [id] INT IDENTITY(1, 1) PRIMARY KEY,
+    [name] VARCHAR(30),
+    [value] real
+)
+GO
+
+CREATE TABLE T2 (
+    [id] INT IDENTITY(1, 1) PRIMARY KEY,
+    [name] VARCHAR(30),
+    [value] real
+)
+GO
+
+CREATE TABLE T1mn2 (
+    [id1] INT FOREIGN KEY REFERENCES T1([id]),
+    [id2] INT FOREIGN KEY REFERENCES T2([id]),
+    PRIMARY KEY (id1, id2)
+)
+GO
+

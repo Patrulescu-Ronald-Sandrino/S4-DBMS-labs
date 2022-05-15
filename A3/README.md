@@ -1,4 +1,8 @@
-# Database Management Systems – Lab 3
+# Notes
+
+
+
+# Requirements: Database Management Systems – Lab 3
 
 
 * assigned: weeks 7/8; due: weeks 11/12
