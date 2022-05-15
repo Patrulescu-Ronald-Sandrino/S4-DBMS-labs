@@ -1,11 +1,10 @@
-USE [dbms-a3]
-GO
+USE [dbms-a3]; GO
 
 
-CREATE OR ALTER PROCEDURE run0RollbackAddCommit
-AS
+CREATE OR ALTER PROCEDURE run1RollbackAddSuccess AS
     BEGIN TRAN
     BEGIN TRY
+        -- autogenerate the names based on the ids that will be assigned
         DECLARE @id1 INT = 1 + (SELECT MAX(id) FROM [T1])
         DECLARE @id2 INT = 1 + (SELECT MAX(id) FROM [T2])
         IF @id1 IS NULL
@@ -17,27 +16,27 @@ AS
 
         EXEC addT1  @name1, 15
         EXEC addT2 @name2, 20
+        SET @id1 = (SELECT MAX(id) FROM [T1])
+        SET @id2 = (SELECT MAX(id) FROM [T2])
         EXEC addT1mn2 @id1, @id2
         COMMIT TRAN
-    end try
-    begin catch
+    END TRY
+    BEGIN CATCH
         ROLLBACK TRAN
         RETURN
-    end catch
+    END CATCH
 GO
 
 
-CREATE OR ALTER PROCEDURE run0RollbackAddRollback
-AS
+CREATE OR ALTER PROCEDURE run1RollbackAddFailure AS
     BEGIN TRAN
     BEGIN TRY
         EXEC addT1 'Name 1-2', 15
-        EXEC addT2 'Name 2-2', -1 -- fails bc. value < 0
+        EXEC addT2 'Name 2-2', -1 -- fails bc. @value < 0
         EXEC addT1mn2 2, 2
         COMMIT TRAN
-    end try
-    begin catch
+    END TRY
+    BEGIN CATCH
         ROLLBACK TRAN
-        RETURN
-    end catch
+    END CATCH
 GO

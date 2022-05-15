@@ -4,6 +4,7 @@
     <script-file value="$PROJECT_DIR$/0-validation.sql" />
     <script-file value="$PROJECT_DIR$/0-dml.sql" />
     <script-file value="$PROJECT_DIR$/1-rollback.sql" />
+    <script-file value="$PROJECT_DIR$/2-recover.sql" />
     <script-mode>FILE</script-mode>
     <data-source id="a1c01e6e-15cf-4e6e-9483-ddbdbb404b87" />
     <method v="2" />

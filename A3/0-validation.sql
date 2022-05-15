@@ -3,25 +3,19 @@ GO
 
 
 CREATE OR ALTER PROCEDURE validateName (@name VARCHAR(30)) AS
-    BEGIN
-        IF @name IS NULL OR LEN(@name) < 2
-            RAISERROR ('Invalid name', 14, 1)
-    END
+    IF @name IS NULL OR LEN(@name) < 2
+        RAISERROR ('Invalid name', 14, 1)
 GO
 
 CREATE OR ALTER PROCEDURE validateValue (@value REAL) AS
-    BEGIN
-        IF @value IS NULL OR @value < 0
-            RAISERROR ('Invalid value', 14, 1)
-    END
+    IF @value IS NULL OR @value < 0
+        RAISERROR ('Invalid value', 14, 1)
 GO
 
 
 CREATE OR ALTER PROCEDURE validateT (@name VARCHAR(30), @value REAL) AS
-    BEGIN
-        EXEC validateName @name
-        EXEC validateValue @value
-    END
+    EXEC validateName @name
+    EXEC validateValue @value
 GO
 
 -- validateName NULL; GO -- fails
