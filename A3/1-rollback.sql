@@ -6,8 +6,8 @@ CREATE OR ALTER PROCEDURE run0RollbackAddCommit
 AS
     BEGIN TRAN
     BEGIN TRY
-        DECLARE @id1 INT = 1 + (SELECT MAX(id) FROM T1)
-        DECLARE @id2 INT = 1 + (SELECT MAX(id) FROM T2)
+        DECLARE @id1 INT = 1 + (SELECT MAX(id) FROM [T1])
+        DECLARE @id2 INT = 1 + (SELECT MAX(id) FROM [T2])
         IF @id1 IS NULL
             SET @id1 = 0
         IF @id2 iS NULl
