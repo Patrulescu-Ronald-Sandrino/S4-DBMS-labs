@@ -1,0 +1,6 @@
+USE [dbms-a3]; GO
+
+BEGIN TRAN
+UPDATE T1 SET value = 5 WHERE name = 'name3'
+WAITFOR DELAY '00:00:3'
+ROLLBACK TRAN
