@@ -1,6 +1,6 @@
 USE [dbms-a3]; GO
 
--- Switch commenting between the next 2 statements
+/* Switch commenting between the next 2 statements */
 -- SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED -- Problem
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- Solution (note that this the default TRANSACTION ISOLATION LEVEL)
 

@@ -1,0 +1,7 @@
+USE [dbms-a3]; GO
+
+INSERT INTO T1 VALUES ('name4', 5)
+BEGIN TRAN
+WAITFOR DELAY '00:00:3'
+UPDATE T1 SET value = 2 WHERE name = 'name4'
+COMMIT TRAN
