@@ -1,0 +1,7 @@
+USE [dbms-a3]; GO
+
+SET TRANSACTION ISOLATION LEVEL SNAPSHOT
+BEGIN TRAN
+WAITFOR DELAY '00:00:05'
+UPDATE T1 SET name ='name for update conflict in transaction 2 update' WHERE value = 999
+COMMIT TRAN

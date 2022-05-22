@@ -1,0 +1,14 @@
+USE [dbms-a3]; GO
+
+
+DELETE FROM T1 WHERE value = 999
+INSERT INTO T1 VALUES ('name for update conflict', 999)
+
+ALTER DATABASE [dbms-a3] SET ALLOW_SNAPSHOT_ISOLATION ON
+-- ALTER DATABASE [dbms-a3] SET ALLOW_SNAPSHOT_ISOLATION OFF
+
+WAITFOR DELAY '00:00:05'
+BEGIN TRAN
+UPDATE T1 SET name ='name for update conflict in transaction 1 update' WHERE value = 999
+WAITFOR DELAY '00:00:05'
+COMMIT TRAN
