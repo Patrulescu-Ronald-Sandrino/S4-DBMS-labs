@@ -1,7 +1,7 @@
 USE MASTER
 GO
 
-DROP DATABASE IF EXISTS [dbms-a3]; CREATE DATABASE [dbms-a3]
+-- DROP DATABASE IF EXISTS [dbms-a3]; CREATE DATABASE [dbms-a3]
 GO
 
 USE [dbms-a3]
@@ -15,7 +15,7 @@ GO
 
 CREATE TABLE [T1] (
     [id] INT IDENTITY(1, 1) PRIMARY KEY,
-    [name] VARCHAR(30),
+    [name] VARCHAR(100),
     [value] real
 )
 DBCC CHECKIDENT ([T1], RESEED, 0)
@@ -24,7 +24,7 @@ GO
 
 CREATE TABLE [T2] (
     [id] INT IDENTITY(1, 1) PRIMARY KEY,
-    [name] VARCHAR(30),
+    [name] VARCHAR(100),
     [value] real
 )
 DBCC CHECKIDENT ([T2], RESEED, 0)
